@@ -70,6 +70,12 @@ jobs:
           cd build
           Get-FileHash *.exe,*.7z -Algorithm MD5 | Format-List
 
+      - name: Upload Artifact universal
+        uses: actions/upload-artifact@v4
+        with:
+          name: lx-music-desktop-v2.6.0-x64-Setup.exe
+          path: build/lx-music-desktop-v2.6.0-x64-Setup.exe
+
 
   Windows_7:
     name: Windows
